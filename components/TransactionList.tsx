@@ -3,7 +3,7 @@
 import { deleteTransaction } from "@/actions/transaction";
 import { format } from "date-fns";
 import {
-    ArrowDownLeft, ArrowUpRight, Trash2, ChevronLeft, ChevronRight, ReceiptText,
+    Trash2, ChevronLeft, ChevronRight, ReceiptText,
     Utensils, Car, ShoppingBag, Heart, GraduationCap, Gamepad2, FileText,
     Wallet, Laptop, TrendingUp, Gift, FolderOpen
 } from "lucide-react";

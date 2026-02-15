@@ -30,7 +30,7 @@ export async function getGoals() {
         }));
 
         return { success: true, data: serializedGoals };
-    } catch (error) {
+    } catch (_error) {
         return { error: "Failed to fetch goals" };
     }
 }
@@ -59,7 +59,7 @@ export async function createGoal(formData: FormData) {
         });
         revalidatePath("/dashboard/goals");
         return { success: true };
-    } catch (error) {
+    } catch (_error) {
         return { error: "Failed to create goal" };
     }
 }
@@ -126,8 +126,8 @@ export async function updateGoalAmount(id: string, amount: number) {
         revalidatePath("/dashboard/transactions");
         return result;
 
-    } catch (error: any) {
-        if (error.message === "Insufficient balance") {
+    } catch (error: unknown) {
+        if (error instanceof Error && error.message === "Insufficient balance") {
             return { error: "Insufficient balance" };
         }
         return { error: "Failed to update goal" };
@@ -145,7 +145,7 @@ export async function deleteGoal(id: string) {
         });
         revalidatePath("/dashboard/goals");
         return { success: true };
-    } catch (error) {
+    } catch (_error) {
         return { error: "Failed to delete goal" };
     }
 }

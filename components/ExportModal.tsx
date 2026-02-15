@@ -140,7 +140,7 @@ export function ExportModal({ trigger }: ExportModalProps) {
             let exportedFilename = "";
 
             if (format === "JSON") {
-                const exportData: any = {};
+                const exportData: Record<string, unknown> = {};
                 if (includeTransactions) exportData.transactions = data.transactions;
                 if (includeGoals) exportData.goals = data.goals;
 
@@ -228,7 +228,7 @@ export function ExportModal({ trigger }: ExportModalProps) {
                         headStyles: { fillColor: [20, 184, 166] }
                     });
 
-                    // @ts-ignore
+                    // @ts-expect-error jspdf-autotable extends jsPDF prototype
                     yPos = doc.lastAutoTable.finalY + 20;
                 }
 

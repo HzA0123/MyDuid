@@ -6,7 +6,6 @@ import { LayoutDashboard, CreditCard, Target, LogOut, User, X } from "lucide-rea
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NavLink } from "@/components/NavLink";
-import { cn } from "@/lib/utils";
 import { LogoutDialog } from "@/components/LogoutDialog";
 
 interface MobileSidebarProps {

@@ -33,7 +33,7 @@ export default async function TransactionsPage() {
                         </div>
                         <div className="p-6 pt-2 space-y-6">
                             {goals && goals.length > 0 ? (
-                                goals.map((goal: any, index: number) => (
+                                goals.map((goal: { id: string; name: string; targetAmount: number; currentAmount: number; deadline?: Date | null }, index: number) => (
                                     <div key={goal.id} className={index !== goals.length - 1 ? "pb-6 border-b border-white/5" : ""}>
                                         <GoalCard goal={goal} compact={true} hideWrapper={true} />
                                     </div>

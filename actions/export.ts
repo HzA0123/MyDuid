@@ -10,7 +10,7 @@ export async function getExportData(startDate?: Date, endDate?: Date) {
 
     try {
 
-        const transactionWhere: any = { userId: session.user.id };
+        const transactionWhere: Record<string, unknown> = { userId: session.user.id };
         if (startDate && endDate) {
             transactionWhere.date = {
                 gte: startDate,

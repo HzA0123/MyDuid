@@ -1,16 +1,14 @@
 import { getBalance, getTransactions, getMonthlyStats, getFinancialStats } from "@/actions/transaction";
-import { TransactionForm } from "@/components/TransactionForm";
 import { TransactionList } from "@/components/TransactionList";
 import { DashboardChart } from "@/components/DashboardChart";
 import { DashboardStats } from "@/components/DashboardStats";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { ArrowDownRight, ArrowUpRight, Wallet } from "lucide-react";
 import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
 export default async function DashboardPage() {
-    const { data: balanceData } = await getBalance();
+    await getBalance();
     const { data: transactions } = await getTransactions(5);
     const { data: monthlyStats } = await getMonthlyStats();
     const { data: financialStats } = await getFinancialStats();

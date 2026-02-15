@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Loader2, Mail, Lock, Wallet, ArrowRight } from "lucide-react";
+import { Loader2, Mail, Lock, ArrowRight } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
@@ -51,7 +51,7 @@ export function LoginForm() {
                 router.push("/dashboard");
                 router.refresh();
             }
-        } catch (error) {
+        } catch (_error) {
             setError("Something went wrong");
             setLoading(false);
         }
@@ -194,7 +194,7 @@ export function LoginForm() {
 
             <div className="text-center mt-6 relative z-10">
                 <p className="text-sm text-slate-500">
-                    Don't have an account?{" "}
+                    Don&apos;t have an account?{" "}
                     <Link href="/register" className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
                         Create an account
                     </Link>

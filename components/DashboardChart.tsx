@@ -49,7 +49,7 @@ export function DashboardChart({ data }: { data: ChartData[] }) {
                         contentStyle={{ backgroundColor: 'rgba(15, 23, 42, 0.9)', borderRadius: '12px', borderColor: 'rgba(255,255,255,0.1)', color: '#fff' }}
                         itemStyle={{ color: '#fff' }}
                         cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 1 }}
-                        formatter={(value: any) => new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Number(value) || 0)}
+                        formatter={(value: number | undefined) => new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(Number(value) || 0)}
                     />
                     <Area type="monotone" dataKey="income" name="Income" stroke="#2dd4bf" fillOpacity={1} fill="url(#colorIncome)" />
                     <Area type="monotone" dataKey="expense" name="Expense" stroke="#f43f5e" fillOpacity={1} fill="url(#colorExpense)" />

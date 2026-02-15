@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Wallet, ArrowUpRight, ArrowDownRight, TrendingUp, TrendingDown } from "lucide-react";
-import { motion, useInView, useSpring, useTransform, animate } from "framer-motion";
+import { motion, useInView, animate } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface StatsData {

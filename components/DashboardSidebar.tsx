@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { LayoutDashboard, CreditCard, User, LogOut, ChevronLeft, ChevronRight, Target } from "lucide-react";
+import { LayoutDashboard, CreditCard, User, LogOut, ChevronLeft, Target } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NavLink } from "@/components/NavLink";
 import { LogoutDialog } from "@/components/LogoutDialog";

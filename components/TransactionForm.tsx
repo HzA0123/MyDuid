@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogTrigger, DialogClose, DialogTitle, DialogD
 import {
     PlusCircle, Loader2, X, ShoppingBag, Calendar, ChevronDown, ChevronLeft, ChevronRight,
     TrendingUp, TrendingDown, Sparkles, Utensils, Car, Heart, GraduationCap, Gamepad2,
-    FileText, Wallet, Laptop, Gift, FolderOpen, Zap, Package, Scissors
+    Wallet, FolderOpen, Zap, Package, Scissors
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";

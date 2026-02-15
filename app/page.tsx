@@ -1,7 +1,7 @@
 "use client";
 
 import { BackgroundRippleEffect } from "@/components/ui/BackgroundRippleEffect";
-import { ArrowRight, Wallet, PieChart, Activity, Shield, Zap, TrendingUp } from "lucide-react";
+import { ArrowRight, Wallet, PieChart, Activity, Shield } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";

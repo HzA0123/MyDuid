@@ -41,7 +41,7 @@ export async function addTransaction(data: TransactionInput) {
                 amount: Number(transaction.amount)
             }
         };
-    } catch (error) {
+    } catch (_error) {
         return { error: "Failed to add transaction" };
     }
 }
@@ -64,7 +64,7 @@ export async function getTransactions(limit = 10) {
         }));
 
         return { success: true, data: serializedTransactions };
-    } catch (error) {
+    } catch (_error) {
         return { error: "Failed to fetch transactions" };
     }
 }
@@ -80,7 +80,7 @@ export async function deleteTransaction(id: string) {
         revalidatePath("/dashboard");
         revalidatePath("/dashboard/transactions");
         return { success: true };
-    } catch (error) {
+    } catch (_error) {
         return { error: "Failed to delete transaction" };
     }
 }
@@ -103,7 +103,7 @@ export async function getBalance() {
             .reduce((sum, t) => sum + Number(t.amount), 0);
 
         return { success: true, data: { income, expense, balance: income - expense } };
-    } catch (error) {
+    } catch (_error) {
         return { error: "Failed to calculate balance" };
     }
 }
@@ -158,7 +158,7 @@ export async function getMonthlyStats() {
         });
 
         return { success: true, data: stats };
-    } catch (error) {
+    } catch (_error) {
         return { error: "Failed to fetch monthly stats" };
     }
 }
