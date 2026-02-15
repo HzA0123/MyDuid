@@ -226,7 +226,7 @@ export function TransactionList({ transactions, compact = false }: { transaction
                                         whileHover={{ scale: 1.15 }}
                                         whileTap={{ scale: 0.9 }}
                                         onClick={() => handleDelete(transaction.id)}
-                                        className="w-7 p-1.5 rounded-lg text-slate-600 opacity-0 group-hover:opacity-100 hover:text-rose-400 hover:bg-rose-500/10 transition-all duration-200 shrink-0 hidden sm:block"
+                                        className="w-7 p-1.5 rounded-lg text-slate-600 sm:opacity-0 sm:group-hover:opacity-100 hover:text-rose-400 hover:bg-rose-500/10 transition-all duration-200 shrink-0"
                                         title="Delete"
                                     >
                                         <Trash2 className="w-3.5 h-3.5" />
