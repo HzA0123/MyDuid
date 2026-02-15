@@ -1,0 +1,3 @@
+// No changes needed to actions/transaction.ts as it defaults to limit 10, but we can call it with any number.
+// The default is fine, but checking strict types might be good.
+// Currently getTransactions(limit = 10) is defined.
